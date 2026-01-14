@@ -31,7 +31,6 @@ function WCM.TRADE_SKILL_LIST_UPDATE()
 			-- WhoCanMake_data[itemID][WCM.realm] = WhoCanMake_data[itemID][WCM.realm] or {}
 			WhoCanMake_data[itemID][WCM.realm.."-"..WCM.name] = true
 		end
-
 	end
 end
 function WCM.onTooltipSetItem( tooltip, tooltipdata )
@@ -49,6 +48,5 @@ function WCM.onTooltipSetItem( tooltip, tooltipdata )
 			}
 			tooltip:AddLineDataText( WCM.lineData )
 		end
-
 	end
 end
