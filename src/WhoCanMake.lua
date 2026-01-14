@@ -27,8 +27,8 @@ function WCM.TRADE_SKILL_LIST_UPDATE()
 		print( recipeID, recipeInfoTable.name, recipeInfoTable.learned, itemID )
 		if itemID and recipeInfoTable.learned then
 			WhoCanMake_data[itemID] = WhoCanMake_data[itemID] or {}
-			WhoCanMake_data[itemID][WCM.realm] = WhoCanMake_data[itemID][WCM.realm] or {}
-			WhoCanMake_data[itemID][WCM.realm][WCM.name] = true
+			-- WhoCanMake_data[itemID][WCM.realm] = WhoCanMake_data[itemID][WCM.realm] or {}
+			WhoCanMake_data[itemID][WCM.realm.."-"..WCM.name] = true
 		end
 
 	end
