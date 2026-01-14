@@ -1,0 +1,13 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+	<!--<Script file="Rested.lua"/> -->
+	<!-- Version 2.0 -->
+
+	<Frame name="WhoCanMakeFrame" toplevel="false" parent="UIParent" enableMouse="false" movable="false">
+		<Scripts>
+			<OnLoad>WCM.OnLoad()</OnLoad>
+			<OnEvent>WCM[event]( ... )</OnEvent>
+			<OnUpdate>WCM.OnUpdate(elapsed)</OnUpdate>
+		</Scripts>
+	</Frame>
+</Ui>
