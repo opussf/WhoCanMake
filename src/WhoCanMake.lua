@@ -12,6 +12,7 @@ end
 function WCM.LOADING_SCREEN_DISABLED()
 	WCM.name = UnitName("player")
 	WCM.realm = GetRealmName()
+	TooltipDataProcessor.AddTooltipPostCall( Enum.TooltipDataType.Item, WCM.onTooltipSetItem )
 end
 function WCM.TRADE_SKILL_LIST_UPDATE()
 	print( "TRADE_SKILL_LIST_UPDATE" )
@@ -33,32 +34,16 @@ function WCM.TRADE_SKILL_LIST_UPDATE()
 
 	end
 end
+function WCM.onTooltipSetItem( tooltip, tooltipdata )
+	local itemID = tooltipdata.id
 
+	if itemID and WhoCanMake_data[itemID] then
+		for maker,_ in pairs( WhoCanMake_data[itemID] ) do
+			WCM.lineData = {
+				["leftText"] = maker
+			}
+			tooltip:AddLineDataText( WCM.lineData )
+		end
 
-
---[[
-C_TradeSkillUI.GetRecipeSchematic( ID, isRecraft, recipeLevel )
-
-
-
-
-{
-			Name = "CraftingRecipeSchematic",
-			Type = "Structure",
-			Fields =
-			{
-				{ Name = "recipeID", Type = "number", Nilable = false },
-				{ Name = "icon", Type = "number", Nilable = false },
-				{ Name = "quantityMin", Type = "number", Nilable = false },
-				{ Name = "quantityMax", Type = "number", Nilable = false },
-				{ Name = "name", Type = "cstring", Nilable = false },
-				{ Name = "recipeType", Type = "TradeskillRecipeType", Nilable = false, Default = "Item" },
-				{ Name = "productQuality", Type = "number", Nilable = true },
-				{ Name = "outputItemID", Type = "number", Nilable = true },
-				{ Name = "reagentSlotSchematics", Type = "table", InnerType = "CraftingReagentSlotSchematic", Nilable = false },
-				{ Name = "isRecraft", Type = "bool", Nilable = false },
-				{ Name = "hasCraftingOperationInfo", Type = "bool", Nilable = false },
-			},
-		},
-
-]]
+	end
+end
