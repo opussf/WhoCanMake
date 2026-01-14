@@ -1,0 +1,30 @@
+## Title: WhoCanMake
+## Interface: @INTERFACE@
+## Notes: WhoCanMake (@VERSION@)
+## Notes-deDE: Anzeigen, wer ein Item herstellen kann.
+## Notes-frFR: Afficher qui peut créer un item.
+## Notes-esES: Mostrar quién puede crear un ítem.
+## Notes-esMX: Mostrar quién puede crear un ítem.
+## Notes-ptBR: Mostrar quem pode criar um item.
+## Notes-ruRU: Показать, кто может создавать предмет.
+## Notes-koKR: 누가 아이템을 만들 수 있는지 표시합니다.
+## Author: opussf
+## Version: @VERSION@
+## Description: Show Who Can Make an item.
+## Description-deDE: Anzeigen, wer ein Item herstellen kann.
+## Description-frFR: Afficher qui peut créer un item.
+## Description-esES: Mostrar quién puede crear un ítem.
+## Description-esMX: Mostrar quién puede crear un ítem.
+## Description-ptBR: Mostrar quem pode criar um item.
+## Description-ruRU: Показать, кто может создавать предмет.
+## Description-koKR: 누가 아이템을 만들 수 있는지 표시합니다.
+## SavedVariables: WhoCanMake_data
+localization/localization_core.lua
+localization/localization_de.lua
+localization/localization_fr.lua
+localization/localization_es.lua
+localization/localization_pt.lua
+localization/localization_ru.lua
+localization/localization_kr.lua
+WhoCanMake.lua
+WhoCanMake.xml
