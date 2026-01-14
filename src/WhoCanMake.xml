@@ -7,7 +7,7 @@
 		<Scripts>
 			<OnLoad>WCM.OnLoad()</OnLoad>
 			<OnEvent>WCM[event]( ... )</OnEvent>
-			<OnUpdate>WCM.OnUpdate(elapsed)</OnUpdate>
+			<!-- <OnUpdate>WCM.OnUpdate(elapsed)</OnUpdate> -->
 		</Scripts>
 	</Frame>
 </Ui>
